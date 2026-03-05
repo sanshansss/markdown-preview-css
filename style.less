@@ -1,0 +1,540 @@
+/* ============================================
+   Markdown Preview 样式 - Wikipedia 风格
+   基于 Linux Libertine + 经典学术排版
+   ============================================ */
+
+.markdown-preview.markdown-preview {
+  /* 基础排版 */
+  font-family: 'Linux Libertine', 'Georgia', 'Times New Roman', serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #202122;
+  background-color: #ffffff;
+
+  /* 页面边距 */
+  padding: 20px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+
+  /* 文本渲染优化 */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* ==========================================
+     标题样式 - 层次分明的学术风格
+     ========================================== */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Linux Libertine', 'Georgia', serif;
+    font-weight: normal;
+    color: #000000;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 0.3em;
+    margin-top: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 0.2em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  h5, h6 {
+    font-size: 1em;
+    font-weight: bold;
+    color: #54595d;
+  }
+
+  /* ==========================================
+     段落与文本
+     ========================================== */
+  p {
+    margin: 0.5em 0 1em 0;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  /* 首字母下沉效果（可选） */
+  // p:first-of-type::first-letter {
+  //   font-size: 3em;
+  //   float: left;
+  //   line-height: 0.8;
+  //   padding-right: 0.1em;
+  //   color: #202122;
+  //   font-family: 'Linux Libertine', serif;
+  // }
+
+  /* ==========================================
+     链接样式
+     ========================================== */
+  a {
+    color: #0645ad;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  a:hover {
+    color: #0b0080;
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: #0b0080;
+  }
+
+  a:active {
+    color: #faa700;
+  }
+
+  /* ==========================================
+     列表样式
+     ========================================== */
+  ul, ol {
+    margin: 0.5em 0 1em 0;
+    padding-left: 1.5em;
+  }
+
+  li {
+    margin: 0.3em 0;
+    line-height: 1.5;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ul ul li {
+    list-style-type: circle;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  /* ==========================================
+     代码与预格式化文本
+     ========================================== */
+  code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+    background-color: #f8f9fa;
+    border: 1px solid #eaecf0;
+    border-radius: 2px;
+    padding: 0.1em 0.3em;
+    color: #202122;
+  }
+
+  pre {
+    background-color: #f8f9fa;
+    border: 1px solid #c8ccd1;
+    border-radius: 2px;
+    padding: 1em;
+    overflow-x: auto;
+    margin: 1em 0;
+    line-height: 1.4;
+  }
+
+  pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.85em;
+    color: #202122;
+  }
+
+  /* ==========================================
+     引用块
+     ========================================== */
+  blockquote {
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    border-left: 4px solid #a2a9b1;
+    background-color: #f8f9fa;
+    color: #54595d;
+    font-style: italic;
+  }
+
+  blockquote p {
+    margin: 0.5em 0;
+  }
+
+  blockquote cite {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    color: #72777d;
+    font-style: normal;
+  }
+
+  /* ==========================================
+     表格样式 - 经典学术表格
+     ========================================== */
+  table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+    font-size: 0.95em;
+  }
+
+  th, td {
+    border: 1px solid #a2a9b1;
+    padding: 0.4em 0.6em;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background-color: #eaecf0;
+    font-weight: bold;
+    color: #202122;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+
+  tr:hover {
+    background-color: #eaecf0;
+  }
+
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #54595d;
+  }
+
+  /* ==========================================
+     水平线
+     ========================================== */
+  hr {
+    border: none;
+    border-top: 1px solid #a2a9b1;
+    margin: 1.5em 0;
+  }
+
+  /* ==========================================
+     图片与媒体
+     ========================================== */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+  }
+
+  figure {
+    margin: 1.5em 0;
+    text-align: center;
+  }
+
+  figcaption {
+    font-size: 0.9em;
+    color: #54595d;
+    margin-top: 0.5em;
+    font-style: italic;
+  }
+
+  /* ==========================================
+     定义列表
+     ========================================== */
+  dl {
+    margin: 1em 0;
+  }
+
+  dt {
+    font-weight: bold;
+    margin-top: 0.5em;
+    color: #202122;
+  }
+
+  dd {
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+    color: #54595d;
+  }
+
+  /* ==========================================
+     高亮与标记
+     ========================================== */
+  mark {
+    background-color: #fc3;
+    padding: 0.1em 0.2em;
+    border-radius: 2px;
+  }
+
+  ins {
+    text-decoration: underline;
+    color: #006400;
+  }
+
+  del {
+    text-decoration: line-through;
+    color: #8b0000;
+  }
+
+  /* ==========================================
+     上标下标
+     ========================================== */
+  sup, sub {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  /* ==========================================
+     脚注
+     ========================================== */
+  .footnote {
+    font-size: 0.85em;
+    color: #54595d;
+    border-top: 1px solid #a2a9b1;
+    margin-top: 2em;
+    padding-top: 1em;
+  }
+
+  /* ==========================================
+     任务列表
+     ========================================== */
+  .task-list-item {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .task-list-item input[type="checkbox"] {
+    margin-right: 0.5em;
+    cursor: pointer;
+  }
+
+  /* ==========================================
+     数学公式
+     ========================================== */
+  .math {
+    font-family: 'Cambria Math', 'Latin Modern Math', serif;
+  }
+
+  /* ==========================================
+     自定义 PDF 导出样式
+     ========================================== */
+  @media print {
+    font-size: 11pt;
+    line-height: 1.4;
+
+    h1 { font-size: 18pt; }
+    h2 { font-size: 14pt; }
+    h3 { font-size: 12pt; }
+
+    a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    a[href]:after {
+      content: " (" attr(href) ")";
+      font-size: 0.8em;
+      color: #54595d;
+    }
+
+    pre, blockquote {
+      border: 1px solid #a2a9b1;
+      page-break-inside: avoid;
+    }
+
+    img {
+      max-width: 100% !important;
+      page-break-inside: avoid;
+    }
+
+    table {
+      page-break-inside: avoid;
+    }
+
+    /* 隐藏打印不需要的元素 */
+    .no-print {
+      display: none !important;
+    }
+  }
+
+  /* ==========================================
+     Prince PDF 导出专用样式
+     ========================================== */
+  &.prince {
+    /* Prince 特定优化 */
+    hyphens: auto;
+    prince-hyphenate-lines: 2;
+
+    /* 页眉页脚设置 */
+    @page {
+      margin: 2.5cm 2cm;
+
+      @top-center {
+        content: string(doctitle);
+        font-size: 9pt;
+        color: #72777d;
+      }
+
+      @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+      }
+    }
+
+    h1 {
+      string-set: doctitle content();
+      page-break-before: always;
+    }
+
+    h1:first-of-type {
+      page-break-before: avoid;
+    }
+
+    h2, h3 {
+      page-break-after: avoid;
+    }
+
+    tr {
+      page-break-inside: avoid;
+    }
+  }
+
+  /* ==========================================
+     Reveal.js 演示文稿样式
+     ========================================== */
+  .reveal .slides {
+    font-family: 'Linux Libertine', 'Georgia', serif;
+    font-size: 28px;
+    color: #202122;
+    background-color: #ffffff;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Linux Libertine', 'Georgia', serif;
+      font-weight: normal;
+      text-transform: none;
+      letter-spacing: normal;
+      text-shadow: none;
+    }
+
+    h1 { font-size: 1.8em; border-bottom: 2px solid #a2a9b1; }
+    h2 { font-size: 1.4em; border-bottom: 1px solid #a2a9b1; }
+    h3 { font-size: 1.2em; font-weight: bold; }
+
+    p {
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    ul, ol {
+      text-align: left;
+      margin-left: 0;
+    }
+
+    li {
+      margin: 0.5em 0;
+    }
+
+    code {
+      font-size: 0.8em;
+    }
+
+    pre {
+      font-size: 0.6em;
+      width: 100%;
+    }
+
+    blockquote {
+      width: 80%;
+      margin: 1em auto;
+    }
+
+    table {
+      font-size: 0.7em;
+      margin: 1em auto;
+    }
+  }
+
+  /* 第一个幻灯片特殊样式 */
+  .slides > section:nth-child(1) {
+    text-align: center;
+
+    h1 {
+      font-size: 2.2em;
+      border-bottom: none;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      color: #54595d;
+      border-bottom: none;
+      font-weight: normal;
+    }
+
+    p {
+      text-align: center;
+      font-size: 0.9em;
+      color: #72777d;
+    }
+  }
+}
+
+/* ============================================
+   侧边栏目录样式
+   ============================================ */
+.md-sidebar-toc.md-sidebar-toc {
+  font-family: 'Linux Libertine', 'Georgia', serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #202122;
+  background-color: #f8f9fa;
+  border-right: 1px solid #c8ccd1;
+
+  /* 内边距 */
+  padding: 16px 12px;
+
+  /* 滚动条样式 */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #a2a9b1 #f8f9fa;
+
+  /* Webkit 滚动条 */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f8f9fa;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #a2a9b1;
+    border-radius: 4px;
+    border: 2px solid #f8f9fa;
+  }
+}
